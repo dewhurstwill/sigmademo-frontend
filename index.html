@@ -1,7 +1,7 @@
 <html>
   <body>
     <script>
-      const api = "ENDPOINT_PLACEHOLDER"
+      const api = `https://${window.location.host}/api/health`
       const res = document.getElementById('res')
       fetch(api)
         .then(response => {
