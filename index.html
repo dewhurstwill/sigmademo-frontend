@@ -1,8 +1,8 @@
 <html>
   <body>
+		<div id="res" />
     <script>
       const api = `https://${window.location.host}/api/hello/world`
-      const res = document.getElementById('res')
       fetch(api)
         .then(response => {
           if (!response.ok) {
@@ -11,13 +11,13 @@
           return response.json()
         })
         .then(data => {
-          res.innerText = JSON.stringify(data)
+					console.log(data)
+           document.getElementById('res').innerText = JSON.stringify(data)
         })
         .catch(error => {
         console.log(error)
-        res.innerText = "Error from API"
+         document.getElementById('res').innerText = "Error from API"
       })
     </script>
-    <div id="res" />
   </body>
 </html>
