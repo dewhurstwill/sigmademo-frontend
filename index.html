@@ -11,9 +11,7 @@
           return response.json()
         })
         .then(data => {
-          console.log(data.count)
-          console.log(data.products)
-          res.innerText = JSON.stringify(data.products)
+          res.innerText = JSON.stringify(data)
         })
         .catch(error => {
         console.log(error)
